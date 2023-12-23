@@ -16,6 +16,10 @@ const router = createBrowserRouter([
         element: <Dashboard />,
       },
       {
+        path: "",
+        element: <Navigate to={"dashboard"} />,
+      },
+      {
         path: "usermanager",
         element: <UserManager />,
       },
