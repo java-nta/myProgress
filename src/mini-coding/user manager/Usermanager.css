@@ -1,0 +1,179 @@
+.user-manager > * {
+  transition: all 0.3s ease-in-out;
+}
+/*----------------- 
+  Menu manager
+  ----------------*/
+.manager-menu {
+  box-shadow: 0 0 10px #1c1c1c;
+  width: 90%;
+  max-width: 600px;
+  background-color: #272727;
+  margin: 50px auto;
+  padding: 0.5rem;
+  border-radius: 8px;
+  justify-content: space-between;
+}
+.manager-menu form {
+  max-width: 300px;
+  width: 100%;
+}
+.manager-menu input {
+  border: 2px solid #060606;
+  outline: none;
+  font-weight: 500;
+  padding: 0.25rem;
+  background-color: #1c1c1c;
+  border-radius: 4px;
+  backdrop-filter: blur(10px);
+  color: #c3c3c3;
+}
+.manager-menu .btn,
+.manager-modal .btn {
+  color: #687eff;
+  padding: 0.25rem 0.5rem;
+  border: 2px solid transparent;
+}
+.manager-menu .btn:hover,
+.manager-modal .btn:hover {
+  border-color: #060606;
+  background-color: #1c1c1c;
+}
+.manager-menu input:focus {
+  border-color: #060606;
+}
+@media screen and (max-width: 720px) {
+  .manager-menu {
+    justify-content: center !important;
+    row-gap: 1rem;
+    padding: 0.5rem;
+  }
+}
+/*----------------- 
+  Model manager
+  ----------------*/
+.manager-modal {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  top: 40%;
+  transform: translateY(-50%);
+  padding: 0.75rem;
+  background-color: #272727;
+  width: 75%;
+  border-radius: 8px;
+  max-width: 400px;
+  filter: blur(10px);
+  box-shadow: 0 0 10px #1c1c1c;
+  z-index: 10;
+}
+
+.manager-modal h1 {
+  color: #687eff;
+  font-size: 3rem;
+}
+.manager-modal input {
+  border: 2px solid #060606;
+  outline: none;
+  font-weight: 500;
+  padding: 0.25rem;
+  background-color: #1c1c1c;
+  border-radius: 4px;
+  backdrop-filter: blur(10px);
+  color: #c3c3c3;
+}
+
+.manager-modal-show {
+  visibility: visible;
+  opacity: 1;
+  top: 50%;
+  filter: blur(0);
+}
+.mssg-modal {
+  background-color: #272727;
+  width: fit-content;
+  color: #fdfdfd;
+  padding: 0.2rem 0.5rem;
+  border-radius: 8px;
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  right: -50%;
+  transform: translate(-50%, -50%);
+}
+.mssg-modal-show {
+  right: 0;
+  visibility: visible;
+  opacity: 1;
+  display: block;
+  animation: slideOut ease-in-out 2s forwards;
+}
+@keyframes slideOut {
+  100% {
+    right: -50%;
+  }
+}
+.mssg-modal span {
+  font-weight: 700 !important;
+  font-size: 20px;
+}
+.mssg-modal .fa-check {
+  font-weight: bolder !important;
+  font-size: 30px;
+  padding: 0.15rem;
+  border-radius: 4px;
+  background-color: var(--bs-success);
+  filter: brightness(1.5);
+  transform: scale(0.7);
+}
+
+/*---------- 
+  User list
+  ----------*/
+
+.user-list {
+  background-color: #272727;
+  width: 90%;
+  max-width: 800px;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #1c1c1c;
+  font-size: 100% !important;
+}
+.user-list table {
+  border-collapse: separate;
+  width: 100%;
+  text-align: center;
+}
+.user-list thead {
+  color: #687eff;
+  background-color: #1c1c1c;
+}
+.user-list tbody tr {
+  color: #757575;
+  transition: all 0.3s ease-in-out;
+}
+.user-list tbody tr:hover {
+  background-color: #1c1c1c;
+  color: #687eff;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #1c1c1c;
+}
+.user-role span {
+  background-color: #1c1c1c;
+  color: #687eff;
+  font-size: 60%;
+  font-weight: 700;
+  border-radius: 4px;
+  padding: 0.15rem;
+}
+@media screen and (max-width: 720px) {
+  .user-list {
+    font-size: 80% !important;
+  }
+  @media screen and (max-width: 500px) {
+    .user-list {
+      font-size: 60% !important;
+    }
+  }
+}

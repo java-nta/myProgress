@@ -1,0 +1,38 @@
+.text-light {
+  color: #c3c3c3 !important;
+}
+.auth-wrapper {
+  background-color: #fff;
+  box-shadow: 0 0 20px #696969;
+  padding: 20px 15px;
+  max-width: 330px;
+  border-radius: 8px;
+  margin: 50px auto;
+  font-size: 100%;
+}
+.auth-wrapper input {
+  border: 2px solid hsl(244, 33%, 86%);
+  font-weight: 500;
+  padding: 0.25rem;
+  background-color: hsla(0, 0%, 0%, 0.02);
+  border-radius: 4px;
+  outline: none;
+  backdrop-filter: blur(10px);
+}
+.auth-wrapper input:focus{
+  border-color: #272727;
+}
+.auth-wrapper input[type="checkbox"] {
+  transform: scale(1.2) translate(2px, 1px);
+}
+.auth-wrapper input[type="checkbox"]:checked {
+  transform: scale(1.3) translate(2px, 2px);
+}
+.auth-wrapper label {
+  font-weight: 600;
+  color: #16164d;
+}
+.btn-purple {
+  color: #fff;
+  background: linear-gradient(to left, #3671fd, #6f31ff) !important;
+}

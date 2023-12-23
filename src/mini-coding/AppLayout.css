@@ -1,0 +1,115 @@
+.side-bar {
+  position: fixed;
+  z-index: 10;
+  top: 5%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #1c1c1c;
+  height: 90%;
+  width: 18%;
+  left: 3%;
+  padding: 1rem;
+  background-color: #272727;
+  font-weight: 600;
+}
+
+.btn-dingo {
+  border: 2px solid transparent;
+  background-color: transparent;
+  border-radius: 8px;
+}
+.btn-dingo:hover {
+  background-color: #1c1c1c;
+  border-color: #060606;
+}
+
+.side-bar color {
+  color: #687eff;
+}
+.side-bar .sidebar-link,
+button {
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 2px solid transparent;
+}
+.side-bar .sidebar-link:hover {
+  background-color: #1c1c1c;
+  border-color: #060606;
+}
+.side-bar i {
+  font-size: 18px;
+}
+.bar-toggle {
+  visibility: hidden;
+}
+.side-content {
+  margin-left: 15%;
+}
+.logout-mini {
+  display: none;
+}
+
+@media screen and (max-width: 1010px) {
+  .side-bar {
+    padding: 0.5rem;
+    width: max-content !important;
+  }
+  .side-content {
+    margin-left: 10%;
+  }
+  .side-bar a span,
+  .side-bar p,
+  .logout {
+    display: none;
+  }
+  .logout-mini {
+    display: inline-block;
+  }
+}
+@media screen and (max-width: 520px) {
+  .side-content {
+    margin-left: 0%;
+  }
+  .side-bar {
+    height: fit-content;
+  }
+  .side-bar .menu {
+    display: none;
+  }
+  .bar-toggle {
+    visibility: visible;
+  }
+}
+.logout-modal {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-15%, -50%);
+  padding: 0.75rem;
+  background-color: #272727;
+  width: 75%;
+  border-radius: 8px;
+  max-width: 400px;
+  filter: blur(10px);
+  box-shadow: 0 0 10px #1c1c1c;
+  z-index: 15;
+  transition: all 0.3s ease-in-out;
+}
+.logout-modal-show {
+  visibility: visible;
+  opacity: 1;
+  top: 50%;
+  filter: blur(0);
+}
+.logout :hover {
+  transform: scale(1.2);
+}
+.menu-show {
+  display: inline-block !important;
+}
+@media screen and (max-width: 1000px) {
+  .logout-modal {
+    transform: translate(-50%, -50%);
+  }
+}
