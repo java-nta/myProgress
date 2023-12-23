@@ -6,7 +6,6 @@ import UserManager from "./mini-coding/user manager/UserManager";
 import AppLayout from "./mini-coding/AppLayout";
 import Dashboard from "./mini-coding/Dashboard";
 import UiDesign from "./mini-coding/uidesgin/UiDesign";
-
 const router = createBrowserRouter([
   {
     path: process.env.PUBLIC_URL + "/",
@@ -17,15 +16,11 @@ const router = createBrowserRouter([
         element: <Dashboard />,
       },
       {
-        path: process.env.PUBLIC_URL + "/",
-        element: <Navigate to="/dashboard" />,
-      },
-      {
-        path: process.env.PUBLIC_URL + "usermanager",
+        path: "usermanager",
         element: <UserManager />,
       },
       {
-        path: process.env.PUBLIC_URL + "uidesign",
+        path: "uidesign",
         element: <UiDesign />,
       },
     ],
@@ -36,11 +31,11 @@ const router = createBrowserRouter([
     element: <Authentication />,
     children: [
       {
-        path: process.env.PUBLIC_URL + "login",
+        path: "login",
         element: <Login />,
       },
       {
-        path: process.env.PUBLIC_URL + "signup",
+        path: "signup",
         element: <SignUp />,
       },
     ],

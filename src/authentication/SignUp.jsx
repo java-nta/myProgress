@@ -1,7 +1,7 @@
 import ToastMessage from "../mini-coding/core/ToastMessage";
 import api from "../Api";
 import { useEffect, useState } from "react";
-import { Navigate } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import $ from "jquery";
 import ShowPasswordEye from "../mini-coding/core/ShowPasswordEye";
 
@@ -228,12 +228,12 @@ const SignUp = () => {
           </button>
         </div>
         <div className="d-flex">
-          <a
-            href="/login"
+          <Link
+            to={process.env.PUBLIC_URL + "/login"}
             className="btn btn-outline-dark w-100 mt-2 fw-medium"
           >
             Login
-          </a>
+          </Link>
         </div>
         <div className="text-center fw-medium mt-1">Or</div>
         <div className="d-flex">

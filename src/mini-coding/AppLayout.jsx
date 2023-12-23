@@ -43,27 +43,26 @@ function AppLayout() {
         >
           <div className="menu top-menu">
             <p className="text-dingo fs-1">
-              {currentUser &&
-                currentUser.username.toUpperCase()}
+              {currentUser && currentUser.username.toUpperCase()}
             </p>
             <p className="text-light small">Projet</p>
             <div className="d-flex flex-column gap-2">
               <Link
-                to="/dashboard"
+                to={process.env.PUBLIC_URL + "/dashboard"}
                 className="sidebar-link text-dingo d-flex align-items-center"
               >
                 <i className="fa fa-dharmachakra col-md-2"></i>
                 <span>Dashboard</span>
               </Link>
               <Link
-                to="/usermanager"
+                to={process.env.PUBLIC_URL + "/usermanager"}
                 className="sidebar-link text-dingo d-flex align-items-center"
               >
                 <i className="fa fa-database col-md-2"></i>
                 <span>User manager</span>
               </Link>
               <Link
-                to="/uidesign"
+                to={process.env.PUBLIC_URL + "/uidesign"}
                 className="sidebar-link text-dingo d-flex align-items-center"
               >
                 <i className="fa fa-chess col-md-2"></i>
@@ -117,7 +116,7 @@ function AppLayout() {
                 </>
               ) : (
                 <Link
-                  to="/login"
+                  to={process.env.PUBLIC_URL + "/login"}
                   className="sidebar-link text-dingo d-flex align-items-center"
                 >
                   <i className="fa fa-circle-user col-md-2"></i>

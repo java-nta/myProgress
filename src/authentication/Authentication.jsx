@@ -13,7 +13,7 @@ const Authentication = () => {
     <div className="auth-wrapper">
       <h1 className="fw-bold mb-3">Authentication</h1>
       <Outlet />
-      <Link to="/dashboard" className="btn btn-outline-dark mt-2 w-100">
+      <Link to={process.env.PUBLIC_URL + "/dashboard"} className="btn btn-outline-dark mt-2 w-100">
         Dashboard
       </Link>
     </div>

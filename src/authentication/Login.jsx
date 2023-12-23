@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Navigate } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import api from "../Api";
 import ToastMessage from "../mini-coding/core/ToastMessage";
 import ShowPasswordEye from "../mini-coding/core/ShowPasswordEye";
@@ -136,12 +136,12 @@ const Login = () => {
           <button className="btn btn-purple w-100 mt-2 fw-medium">Login</button>
         </div>
         <div className="d-flex">
-          <a
-            href="/signup"
+          <Link
+            to={process.env.PUBLIC_URL + "/signup"}
             className="btn btn-outline-dark w-100 mt-2 fw-medium"
           >
             Sign Up
-          </a>
+          </Link>
         </div>
         <div className="text-center fw-medium mt-1">Or</div>
         <div className="d-flex">
