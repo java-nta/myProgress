@@ -11,6 +11,7 @@
     "axios": "^1.6.2",
     "bootstrap": "^5.3.2",
     "fontawesome": "^5.6.3",
+    "gh-pages": "^6.1.1",
     "jquery": "^3.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -22,6 +23,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
