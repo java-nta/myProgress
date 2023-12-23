@@ -9,7 +9,7 @@ import UiDesign from "./mini-coding/uidesgin/UiDesign";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: process.env.PUBLIC_URL + "/",
     element: <AppLayout />,
     children: [
       {
@@ -17,30 +17,30 @@ const router = createBrowserRouter([
         element: <Dashboard />,
       },
       {
-        path:"/",
-        element: <Navigate to="/dashboard"/>
+        path: process.env.PUBLIC_URL + "/",
+        element: <Navigate to="/dashboard" />,
       },
       {
-        path: "usermanager",
+        path: process.env.PUBLIC_URL + "usermanager",
         element: <UserManager />,
       },
       {
-        path: "uidesign",
+        path: process.env.PUBLIC_URL + "uidesign",
         element: <UiDesign />,
       },
     ],
   },
 
   {
-    path: "/",
+    path: process.env.PUBLIC_URL + "/",
     element: <Authentication />,
     children: [
       {
-        path: "login",
+        path: process.env.PUBLIC_URL + "login",
         element: <Login />,
       },
       {
-        path: "signup",
+        path: process.env.PUBLIC_URL + "signup",
         element: <SignUp />,
       },
     ],
